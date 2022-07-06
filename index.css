@@ -1,0 +1,320 @@
+body{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, rgb(54, 0, 51), rgb(11, 135, 147));
+}
+
+body *{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+main{
+    display: none;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #ffffff87;
+    cursor: default;
+    transition: .3s linear;
+}
+
+header h1:hover{
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.createSimulatorForm{
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 10px 9px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 10px 9px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 10px 9px 8px 0px rgba(34, 60, 80, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin: 22vh auto 0;
+    padding: 40px 60px;
+}
+
+@media (max-width: 520px) {
+    .createSimulatorForm{
+        max-width: none;
+        width: fit-content;
+        margin: 12vh auto 0;
+    }
+}
+
+.createSimulatorForm-item{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+@media(max-width: 450px){
+    .createSimulatorForm{
+        margin: 2vh auto 0;
+    }
+    .createSimulatorForm-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 3px;
+    }
+}
+
+.createSimulatorForm-item input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 0;
+    color: #ffff;
+    padding: 2px 5px;
+    transition: .2s linear;
+}
+
+.createSimulatorForm-item input::placeholder{
+    letter-spacing: 3px;
+    color: #c7c7c7;
+    text-align: right;
+}
+
+.createSimulatorForm-item input:hover{
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.createSimulatorForm-item input::-webkit-inner-spin-button{
+    display: none;
+}
+
+.createSimulatorForm-item input:focus{
+    outline: none;
+}
+
+.createSimulatorForm label, .createSimulatorForm h3, .createSimulatorForm h2 {
+    color: #ffff;
+    font-weight: 100;
+}
+
+.createSimulatorForm h3 {
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+.createSimulatorForm h2{
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+#SimulatorCreate {
+    display: block;
+    padding: 15px 72px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 0;
+    cursor: pointer;
+    -webkit-box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.2);
+    margin: 40px auto 15px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    transition: .2s linear;
+}
+
+#SimulatorCreate:hover{
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 255, 255);
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 25px;
+    margin: 25px 0;
+}
+
+.simulator, .chart{
+    width: 100%;
+    max-width: 1920px;
+    overflow: auto;
+}
+
+.simulator canvas{
+    display: block;
+    margin: 0 auto;
+}
+
+.table {
+    overflow-y: auto;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0 20px;
+    height: 540px;
+}
+
+@media (max-width: 680px){
+    .table{
+        overflow-x: auto;
+    }
+    .table table{
+        width: 600px;
+    }
+}
+
+.table::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    margin-left: 5px;
+}
+.table::-webkit-scrollbar-track {
+    background: transparent;
+}
+.table::-webkit-scrollbar-thumb {
+    background-color: #0000004d;
+    border-radius: 20px;
+}
+
+table {
+    width: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead th{
+    background: #95ceff4d;
+    color: white;
+    padding: 10px 20px;
+}
+
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: #ffffff47;
+}
+td {
+    background: #edf4fa3d;
+    color: #cfcfcf;
+}
+tr{
+    transition: .2s linear;
+}
+tr:hover{
+    opacity: 0.8;
+}
+
+.toolbar-row {
+    display: flex;
+    width: fit-content;
+    margin: 15px auto 0;
+}
+
+.toolbar-row:first-of-type{
+    background: linear-gradient(to right, rgb(44, 62, 80), rgb(76, 161, 175));
+}
+
+
+.toolbar-row:first-of-type .toolbar-item{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    column-gap: 10px;
+    color: #e2d9d9;
+}
+
+.toolbar-item input{
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.toolbar-row:first-of-type .toolbar-item:first-of-type{
+    width: 250px;
+}
+
+.toolbar-row:first-of-type .toolbar-item:nth-child(2) input{
+    margin-bottom: -2px;
+}
+
+.chartSelector--item-checkBox{
+    display: none;
+}
+
+.chartSelector--item-checkBox + label{
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #a73030, #65399d);
+    color: #ffff;
+    letter-spacing: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.chartSelector--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.chartSelector--item-checkBox:not(:disabled):not(:checked)+label:hover {
+    background: linear-gradient(45deg, #fd0000, #03370a);
+}
+
+.chartSelector--item-checkBox:not(:disabled):checked+label:hover {
+    background: linear-gradient(45deg, #03370a, #fd0000);
+    color: #ffff;
+}
+
+.chartSelector--item-checkBox:not(:disabled):active+label {
+    background: #000000;
+}
+
+.chartSelector--item-checkBox:checked+label {
+    background: linear-gradient(45deg, #02ff34, #8a4fd4);
+    color: black;
+}
+
+#chart_container > canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+div#chart_container {
+    position: relative;
+}
+
+.row-chart {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 25px;
+    align-items: center;
+    align-content: center;
+}
+
+.chartSelector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    row-gap: 15px;
+}
